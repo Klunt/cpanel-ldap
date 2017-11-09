@@ -97,7 +97,7 @@ switch($error){
 
                 <div class="form-group">
                 <label for="pswd1">' . sprintf(_("Nueva contraseña")) .': </label><input class="form-control" id="pswd1" type="password" name="pswd1" required/>
-                <label for="pswd2">' . sprintf(_("Repetir contraseña")) .': </label><input class="form-control"  id="pswd2" type="password" name="pswd2" required/><p> ' . $msg1 .'</p><div id="pswresult"></div>
+                <label for="pswd2">' . sprintf(_("Repetir la contraseña")) .': </label><input class="form-control"  id="pswd2" type="password" name="pswd2" required/><p> ' . $msg1 .'</p><div id="pswresult"></div>
                 </div>
                 <input type="hidden" name="token" value="'.$urltoken.'" />
                 <input type="submit" name="submit" value="' . sprintf(_("Enviar")) . '" class="btn btn-large btn-primary" /></form>
