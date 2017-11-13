@@ -89,7 +89,7 @@ if(isset($_POST['user']) && isset($_POST['password'])){
     } else {
      $message= "<div class='alert alert-error'>
             <button class='close' data-dismiss='alert'>&times;</button>".
-            sprintf (_("Usuario o Contraseña no válido.")).
+            sprintf (_("Usuario o contraseña no válidos.")).
             "</div>";
     }
 }
@@ -110,10 +110,10 @@ function print_form(){
 
 function updating(){
     		echo '<div class="updating hidden-form">
-  		        <h2 class="form-signin-heading">' . sprintf(_("Actualizando sistema..")) . '</h2>
+  		        <h2 class="form-signin-heading">' . sprintf(_("Actualizando sistema...")) . '</h2>
 		        <hr>
                         <div class="form-group">
-        	          <span>' . sprintf(_("Esta operación tardará unos minutos. En cuanto el sistema esté actualizado aparecerá el formulario para volver a acceder al Panel de Control.")) . '</span>
+        	          <span>' . sprintf(_("Esta operación tardará unos minutos. En cuanto el sistema esté actualizado, aparecerá el formulario para volver a acceder al panel de control.")) . '</span>
                         </div>
     		      </div>';
 }
