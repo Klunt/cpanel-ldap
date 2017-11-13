@@ -216,7 +216,7 @@ $dkim = $Ldap->search($ldapconn,'ou=opendkim,ou=cpanel,' . SUFFIX ,'(&(objectCla
   </div>
   <div class="subtitle-block">
   <h3 class="subtitle"> <?php printf(_(" Activar un dominio en este panel creará la configuración necesaria para:"));?></h3>
-    <p><?php printf(_("<ul> <li> Crear cuentas de correo electrónico</li> <li> Alojar contenido visble visitando el dominio con un navegador </li><li> Crear un certificado SSL para navegación segura (iHTTPS) </li> </ul>
+    <p><?php printf(_("<ul> <li> Crear cuentas de correo electrónico</li> <li> Alojar contenido visible visitando el dominio con un navegador </li><li> Crear un certificado SSL para una navegación segura (HTTPS) </li> </ul>
     Recuerda que, para un correcto funcionamiento de tus dominios en el servidor, es necesario que configures correctamente los DNS desde el panel de configuración de tu proveedor de dominio. (<a href='/" . BASE_PATH ."/domain-instruccions.php'>Saber más</a>). "));?> </p>
   </div>
 <section class="section">
@@ -233,7 +233,7 @@ $dkim = $Ldap->search($ldapconn,'ou=opendkim,ou=cpanel,' . SUFFIX ,'(&(objectCla
 
         <?php
               $mailtitle = sprintf(_("Activar servidor de correo para este dominio"));
-              $mailmessage = sprintf(_("Activa la siguiente casilla si quieres que el correo electrónico para este dominio sea gestionado por este servidor. Si el correo está gestionado por otro servidor (por ejemplo el mismo proveedor de dominio), deja esta casilla desactivada. Podrás cambiar esta opción en cualquier momento desde la página de edición del dominio."), $fqdn);
+              $mailmessage = sprintf(_("Activa la siguiente casilla si quieres que el correo electrónico para este dominio sea gestionado por este servidor. Si el correo está gestionado por otro servidor (por ejemplo, el mismo proveedor de dominio), deja esta casilla desactivada. Podrás cambiar esta opción en cualquier momento desde la página de edición del dominio."), $fqdn);
               $checkbox =  sprintf(_("Activar"));
         ?>
         <label><?php echo $mailtitle;?></label>
@@ -253,7 +253,7 @@ $dkim = $Ldap->search($ldapconn,'ou=opendkim,ou=cpanel,' . SUFFIX ,'(&(objectCla
 El webmaster tendrá permisos para crear, borrar o modificar archivos dentro de la carpeta /var/www/html/<em>example.com</em>/, donde podrá crear la aplicación web. Este usuario sólo tendrá acceso a las carpetas de los dominios por los que ha sido nombrado webmaster y a su carpeta personal. En ningún caso podrá acceder ni ver el resto de archivos y carpetas en el servidor.</p>
 
 
-<p>Recomendamos encarecidamente crear un usuario webmaster, sobretodo si quieres otorgar a alguien el acceso para que trabaje en la web, aplicación o contenidos de la carpeta /var/www/html/example.com/, y que nunca compartas el acceso de SuperUsuario, cuyos privilegios son ilimitados en el sistema."));?> </p>
+<p>Recomendamos encarecidamente crear un usuario webmaster, sobre todo si quieres otorgar a alguien el acceso para que trabaje en la web, aplicación o contenidos de la carpeta /var/www/html/example.com/, y que nunca compartas el acceso de Superusuario, cuyos privilegios son ilimitados en el sistema."));?> </p>
            <?php 
             $ldaptree    = LDAP_PEOPLE;
             $filter="(&(objectClass=person)(uid=*)(authorizedService=sshd)(!(gidnumber=27)))";
@@ -286,7 +286,7 @@ El webmaster tendrá permisos para crear, borrar o modificar archivos dentro de 
               <input class="form-control" id="username" type="text" name="username" /><div id="result"></div>
             </div>
             <div class="form-group">
-              <label for="firstname">'. sprintf(_("Primer nombre (Opcional)")) .'</label>
+              <label for="firstname">'. sprintf(_("Nombre (Opcional)")) .'</label>
               <input class="form-control" id="firstname" type="text" name="firstname" />
             </div>
             <div class="form-group">
@@ -317,7 +317,7 @@ El webmaster tendrá permisos para crear, borrar o modificar archivos dentro de 
             <input class="form-control" id="pswd1" type="password" name="pswd1" autocomplete="off" readonly />
             </div>
             <div class="form-group">
-            <label for="pswd2"><?php printf(_("Confirma contraseña"));?> *</label>
+            <label for="pswd2"><?php printf(_("Confirma la contraseña"));?> *</label>
             <input class="form-control" id="pswd2" type="password" name="pswd2"  />
             <div id="pswresult"></div>
             </div>
