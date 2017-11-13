@@ -50,7 +50,7 @@ if(isset($_POST['adduser'])){
           $entry['userpassword'][0]=$newpass;
           //$entry['shadowlastchange'][0] = floor(time()/86400);
         } else {
-          $message .= sprintf(_("password mismatch"));
+          $message .= sprintf(_("Las contraseñas no coinciden"));
           exit;
         }
 
@@ -158,7 +158,7 @@ $firstuid_availabe=system($commuid);*/?>
                   <label class="control-label"  for="usermail"><?php printf(_("Correo electrónico"));?> *</label>
                   <?php $resultmail = $Ldap->search($ldapconn,LDAP_BASE,'(&(objectClass=VirtualMailAccount)(!(cn=postmaster))(!(mail=abuse@*)))');                  $mailcount = $resultmail["count"];
                   if($mailcount>0) {?>
-                    <p class=""><?php printf(_("Puedes insertar un correo electrónico externo o elegir una entre las cuentas creadas en el servidor"));?></p>
+                    <p class=""><?php printf(_("Puedes insertar un correo electrónico externo o elegir uno entre las cuentas creadas en el servidor"));?></p>
                   <?php } ?>
 
                   <input id="usermail" class="usermail form-control col-sm-4"  type="mail" name="usermail" required />  
@@ -200,7 +200,7 @@ $firstuid_availabe=system($commuid);*/?>
                 <?php if ($Ldap->check_installed_service('phpmyadmin')){?>
                   <hr>
                   <div class="form-group">
-                  <h4><?php printf(_("Acceso aplicación phpmyadmin"));?></h4>
+                  <h4><?php printf(_("Acceso aplicación phpMyAdmin"));?></h4>
                   <div> <label>
 
                     <input name="apache" id="apache" class="checkbox" type="checkbox">
@@ -217,14 +217,14 @@ $firstuid_availabe=system($commuid);*/?>
                   <div> <label>
 
                     <input name="vpn" id="vpn" class="checkbox togglehidden" type="checkbox">
-                    <span><?php printf(_("Activar cuenta vpn"));?></span>
+                    <span><?php printf(_("Activar cuenta VPN"));?></span>
                     </label> </div>
                   </div>
 
                   <div id="hidden">
                   <h4><?php printf(_("Instrucciones"));?></h4> 
                   <p><?php printf(_("Envía al usuario un correo electrónico con los archivos de configuración y las correspondientes instrucciones con tal de configurar correctamente el cliente VPN."));?></p>
-                  <p><?php printf(_("Advertencia: Las instrucciones incluyen todos los datos necesarios menos la contraseña. Por razones de seguridad, debes proporcionar al usuario la contraseña por otro canal."));?></p>
+                  <p><?php printf(_("Advertencia: Las instrucciones incluyen todos los datos necesarios menos la contraseña, que por razones de seguridad debes proporcionar al usuario por otro canal."));?></p>
                   <div> <label>
                     <input class="checkbox" type="checkbox" name="sendinstruction" id="sendinstruction">
                     <span class="small"><?php printf(_("Enviar instrucciones"));?></span>
