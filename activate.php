@@ -53,7 +53,7 @@ if (isset($_POST["activate"])){
         $message="
         <div class='alert alert-error'>
         <button class='close' data-dismiss='alert'>×</button>"
-        .sprintf(_("La contraseña actual no coincide con que has insertado"))." 
+        .sprintf(_("La contraseña actual no coincide con la que has insertado"))." 
          </div>";
     }
     if($pass1==$pass2 && $psw==$_POST["oldpsw"] && $pass3==$pass4){
@@ -133,17 +133,17 @@ require_once('sidebar.php');?>
       <div class="card card-info">
         <div class="card-header">
           <div class="header-block">
-            <p class="title"><?php printf(_("Antes de poder empezar a utilizar el panel de control tienes que  personalizar tu cuenta. La contraseña que acabas de insertar para acceder a esta página es provisional y por razones de seguridad estás forzado a cambiarla."));?></p>
+            <p class="title"><?php printf(_("Antes de poder empezar a utilizar el panel de control, tienes que  personalizar tu cuenta. La contraseña que acabas de insertar para acceder a esta página es provisional y, por razones de seguridad, estás forzado a cambiarla."));?></p>
          </div><!--header-block-->
       </div><!--card-header-->
       <div class="card-block">
-        <?php printf(_("<h5><strong class='pink'>NOTA IMPORTANTE:</strong> Tu servidor ha sido creado con dos usuarios que tienen altos privilegios en el sistema para poder administrar datos y procesos. Estos usuarios son:</h5>"));?>
+        <?php printf(_("<h5><strong class='pink'>Nota importante:</strong> Tu servidor ha sido creado con dos usuarios que tienen altos privilegios en el sistema para poder administrar datos y procesos. Estos usuarios son:</h5>"));?>
         <hr>
-        <?php printf(_("<h5 calss='text-left'><mark>%s</mark> <small class='pink'>Es el usuario con el que te acabas de indentificar y que tiene acceso al panel de control. El panel de control es el interfaz gráfico para gestionar tareas y otros usuarios del sistema.</small></h5>"),$rootusername);
-        printf(_("<h5><mark>%s</mark> <small class='pink'>Este usuario no tiene acceso a través del panel de control. Solo tiene acceso por ssh o sftp. Sin embargo este usuario tiene más privilegios que el anterior, ya que tiene acceso ilimitado al sistema. Este es tu usario root (SuperUsuario).</small></h5>"), $sudousername);?>
+        <?php printf(_("<h5 calss='text-left'><mark>%s</mark> <small class='pink'>Es el usuario con el que te acabas de identificar y que tiene acceso al panel de control. El panel de control es el interfaz gráfico para gestionar tareas y otros usuarios del sistema.</small></h5>"),$rootusername);
+        printf(_("<h5><mark>%s</mark> <small class='pink'>Este usuario no tiene acceso a través del panel de control. Únicamente tiene acceso por SSH o SFTP. Sin embargo, este usuario tiene más privilegios que el anterior, ya que tiene acceso ilimitado al sistema. Este es tu usario root (Superusuario).</small></h5>"), $sudousername);?>
         <hr>
-        <?php printf(_("<h5>Cambia las contraseñas de ambos usuarios, para que solamente tú las conozcas. Apunta en un lugar seguro tanto el nombre de usuario como la nueva contraseña para ambos. Una vez completado este proceso tendrás que volver a entrar al panel de control con las nuevas credenciales para el usuario <mark>%s</mark></h5>"), $rootusername);?>
-        <p><?php printf(_(" Esta página solo se muestra la primera vez que accedes al panel de control. Si quieres volver a cambiar algun parámetro de tu cuenta, lo podrás hacer en cualquier momento desde la página de 'Perfil' "));?></p>
+        <?php printf(_("<h5>Cambia las contraseñas de ambos usuarios para que solamente tú las conozcas. Apunta en un lugar seguro tanto el nombre de usuario como la nueva contraseña de ambos. Una vez completado este proceso, tendrás que volver a entrar al panel de control con las nuevas credenciales para el usuario <mark>%s</mark></h5>"), $rootusername);?>
+        <p><?php printf(_(" Esta página únicamente se muestra la primera vez que accedes al panel de control. Si quieres volver a cambiar algún parámetro de tu cuenta, lo podrás hacer en cualquier momento desde la página de 'Perfil' "));?></p>
         <hr>
       </div><!--card-block-->
     </div><!--card-info-->
@@ -174,11 +174,11 @@ require_once('sidebar.php');?>
 
       <div class="form-group">
         <label for='usermail'><h4><?php printf(_("Correo electrónico"));?></h4></label><div id="emailresult"></div>
-        <p><?php printf(_("Averigua que el correo electrónico asociado a tu cuenta sea válido y que tengas acceso a él: si pierdes la contraseña solo podrás resetearla a través de este correo electrónico."),$user );?></p>
+        <p><?php printf(_("Asegúrate de que el correo electrónico asociado a tu cuenta sea válido y que tengas acceso a él: si pierdes la contraseña solamente podrás resetearla a través de este correo electrónico."),$user );?></p>
         <input id='usermail' class='usermail form-control' type='email' name='usermail' value="<?php echo $rootusermail;?>" required />
       </div>
 
-     <?php printf(_("<h3>Usuario root con acceso ssh/sftp - <mark>%s</mark></h3>"),$sudousername); ?>   
+     <?php printf(_("<h3>Usuario root con acceso SSH/SFTP - <mark>%s</mark></h3>"),$sudousername); ?>   
 
       <div class="form-group">
       <label for="pswd3"><h4><?php printf(_("Nueva contraseña"));?></h4></label>
