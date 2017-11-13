@@ -80,7 +80,7 @@ $mailman_domains = pg_fetch_all($result);
     foreach ($mailman_domains as $domain) {
        if( !empty($activeMailDomains) && array_search($domain["mail_host"], array_column(array_column($activeMailDomains, 'vd'),0)) !== false){
 
-        $domain_status=  sprintf(_("Si usas este dominio para listas de correo puedes experimentar problemas. Ya se está utilizando para correo electrónico. Por favor utiliza otro o deshabilita el servidor de corro para este dominio"));
+        $domain_status=  sprintf(_("Si usas este dominio para listas de correo puedes experimentar problemas. Ya se está utilizando para correo electrónico. Por favor, utiliza otro o deshabilita el servidor de correo para este dominio"));
 
       } else {
         $domain_status=$statok;
@@ -110,7 +110,7 @@ $mailman_domains = pg_fetch_all($result);
 
 printf(_("<h4>No hay ningún dominio activado para listas de correo.</h4>
           <h4>Puedes activar dominios desde la aplicación Mailman <a target=\"_blank\" href=\"/mailman\"><button type='button' class='btn btn-pill-right btn-primary'>Añadir dominios para listas de correo</button></a></h4>"));
-          printf(_("<h5>En caso de dudas puedes consultar las instrucciones en esta página: <a href=\"https://docs.maadix.net/mailman/\" target=\"_blank\">https://docs.maadix.net/mailman/</a></h5>"));
+          printf(_("<h5>En caso de dudas, puedes consultar las instrucciones en esta página: <a href=\"https://docs.maadix.net/mailman/\" target=\"_blank\">https://docs.maadix.net/mailman/</a></h5>"));
 
       }?>
 <!-- Modal -->
