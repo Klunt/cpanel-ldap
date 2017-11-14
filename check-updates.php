@@ -31,7 +31,7 @@ switch ($status) :
 
     <article class="content cards-page">
             <div class="title-block">
-                <h3 class="title"> <?php printf(_("La tarea de Mantenimiento o Actualización ha producido un error."));?> </h3>
+                <h3 class="title"> <?php printf(_("La tarea de mantenimiento o actualización ha producido un error."));?> </h3>
                 <br />
                 <p class="title-description"> <?php printf(_("El equipo técnico ha sido notificado y está ahora trabajando en la solución."));?> </p>
                 <p class="title-description"> <?php printf(_("En breve se pondrá en contacto contigo."));?> </p>
@@ -72,7 +72,7 @@ switch ($status) :
 
       <article class="content cards-page">
             <div class="title-block">
-                <h3 class="title"> <?php printf(_("Una tarea de Mantenimiento o Actualización está pendiente."));?> </h3>
+                <h3 class="title"> <?php printf(_("Una tarea de mantenimiento o actualización está pendiente."));?> </h3>
                 <br />
                 <p class="title-description"> <?php printf(_("Es necesario aplicar los cambios para que la actualización se complete."));?> </p>
                 <br />
@@ -141,7 +141,7 @@ switch ($status) :
     if (empty($updates)) { ?>
       <article class="content cards-page">
             <div class="title-block">
-                <h3 class="title"> <?php printf(_("No hay Actualizaciones Disponibles"));?> </h3>
+                <h3 class="title"> <?php printf(_("No hay actualizaciones disponibles"));?> </h3>
             </div>
       </article>
 
@@ -159,7 +159,7 @@ switch ($status) :
                                     <div class="card-block">
                                         <!-- Nav tabs -->
                                         <div class="card-title-block">
-                                        <h3 class="title"><?php printf(_("Existe una nueva versión del panel de control. Desde esta página puedes actualizaar el sistema a la última versión y a la vez instalar nuevas aplicaciones en una única operación."));?></h3>
+                                        <h3 class="title"><?php printf(_("Existe una nueva versión del panel de control. Desde esta página puedes actualizar el sistema a la última versión y a la vez instalar nuevas aplicaciones en una única operación."));?></h3>
                                         <br>
                                         <h3 class="title"><?php printf(_("Detalles"));?></h3>
                                             <br>
@@ -168,7 +168,7 @@ switch ($status) :
                                               <li><?php printf(_("Descripción: %s"), $updates['description']);?></li>
                                             </ul>
                                             <br>
-                                        <h3 class="title"><?php printf(_(" Selecciona las aplicaciones que quieras instalar y haz click en el botón 'Actualizar' que encontrarás al fondo de esta página para empezar el proceso de actualización." ));?></h3>
+                                        <h3 class="title"><?php printf(_(" Selecciona las aplicaciones que quieras instalar y haz clic en el botón 'Actualizar' que encontrarás al fondo de esta página para empezar el proceso de actualización." ));?></h3>
                                         </div>
                                     </div>
                                     <!-- /.card-block -->
@@ -180,8 +180,8 @@ switch ($status) :
                  </section>
 
             <div class="title-block">
-                <h4 class="title"> <?php printf(_("Aplicaciones Disponibles en la Actualización"));?> </h4>
-                <p class="title-description"> <?php printf(_("Una vez efectuada la actualizaciíon toda las aplicaciones estarán disponibles en el apartado 'Instalar Aplicaciones'"));?> </p>
+                <h4 class="title"> <?php printf(_("Aplicaciones disponibles en la actualización"));?> </h4>
+                <p class="title-description"> <?php printf(_("Una vez efectuada la actualización, todas las aplicaciones estarán disponibles en el apartado 'Instalar aplicaciones'"));?> </p>
             </div>
                  <section class="section">
                         <div class="row ">
@@ -257,9 +257,9 @@ switch ($status) :
     ?>
     <article class="content cards-page">
             <div class="title-block">
-                <h3 class="title"> <?php printf(_("Np hay actualizaciones disponibles en este momento."));?> </h3>
+                <h3 class="title"> <?php printf(_("No hay actualizaciones disponibles en este momento."));?> </h3>
                 <br />
-                <p class="title-description"> <?php printf(_("Inténtelo de nuevo pasados unos minutos."));?> </p>
+                <p class="title-description"> <?php printf(_("Inténtalo de nuevo pasados unos minutos."));?> </p>
                 <p class="title-description"> <?php printf(_("Disculpa las molestias"));?> </p>
             </div>
     </article>
