@@ -188,8 +188,8 @@ require_once('sidebar.php');
     */
 
       If ($status == 'FALSE'){
-      $inactivemsg = sprintf(_('<h5>Servidor de Correo</h5>'));
-      $inactivemsg .= sprintf(_('<p>El Servidor de correo no está activado para este dominio y no podrá enviar y recibir mails. <a href="edit-domain.php?domain=%s">Activalo en esta página</a></p>'), $mail_domain);
+      $inactivemsg = sprintf(_('<h5>Servidor de correo</h5>'));
+      $inactivemsg .= sprintf(_('<p>El servidor de correo no está activado para este dominio y no podrá enviar ni recibir correo electrónico. <a href="edit-domain.php?domain=%s">Actívalo en esta página</a></p>'), $mail_domain);
       }
 
     # Check if domain has correct dns.
@@ -203,7 +203,7 @@ require_once('sidebar.php');
     if ($dns_result >1){
 
       $wrong_mx_message = sprintf(_('<h5>DNS</h5>'));
-      $wrong_mx_message .= sprintf(_('<p>Los DNS del dominio %s no están configurados para que el correo electrónico sea entregado a este servidor . </br> Puedes igualmente crear la cuneta que empezará a recibir correo en este servidor cuando los DNS estién configrados correctamente. Revisa la configuración actual y consulta cual es la correcta en esta página: <a href="editdns.php?domain=%s">DNS para el dominio %s</a></p>'), $mail_domain,$mail_domain,$mail_domain);
+      $wrong_mx_message .= sprintf(_('<p>Los DNS del dominio %s no están configurados para que el correo electrónico sea entregado a este servidor . </br> Puedes igualmente crear la cuenta que empezará a recibir correo en este servidor cuando los DNS estén configurados correctamente. Revisa la configuración actual y consulta cual es la correcta en esta página: <a href="editdns.php?domain=%s">DNS para el dominio %s</a></p>'), $mail_domain,$mail_domain,$mail_domain);
 
     }
 
